@@ -35,6 +35,7 @@ Example:
 Datadog and New Relic use AI to detect performance degradation early, while Splunk provides near real-time insights by correlating logs across systems.
 
 PRACTICAL PART
+TASK 1
 My Python code
 # Sample list of dictionaries
 people = [
@@ -82,7 +83,82 @@ In contrast, the AI-suggested code includes a basic validation step that checks 
 
 Overall, the manual implementation is more efficient in terms of error handling and adaptability. It anticipates common data issues and resolves them gracefully, whereas the AI-suggested code assumes ideal conditions. For production-level applications or data pipelines, the manual version offers greater reliability and resilience, making it the preferred choice for developers working with diverse datasets.
 
+TASK 2
+Valid Login Test
+Command: open
+Target: https://example.com/login
 
+Command: type
+Target: id=username
+Value: validUser
+
+Command: type
+Target: id=password
+Value: validPass123
+
+Command: click
+Target: id=loginBtn
+
+Command: assertText
+Target: id=welcomeMsg
+Value: Welcome, validUser!
+
+Invalid Login Test
+Command: open
+Target: https://example.com/login
+
+Command: type
+Target: id=username
+Value: invalidUser
+
+Command: type
+Target: id=password
+Value: wrongPass
+
+Command: click
+Target: id=loginBtn
+
+Command: assertText
+Target: id=errorMsg
+Value: Invalid username or password.
+
+SUMMARY
+AI significantly enhances test coverage compared to manual testing by automating the generation and execution of a wide range of test scenarios. Unlike manual testing, which is limited by human time and effort, AI can analyze application behavior, user flows, and historical bug data to identify areas that require testing. It can then automatically create test cases for edge cases, negative inputs, and rarely used paths that manual testers might overlook.
+AI-powered tools also adapt to changes in the UI or codebase, maintaining test scripts without constant human intervention. This reduces test maintenance overhead and ensures broader, more consistent coverage across releases. Additionally, AI can prioritize tests based on risk or usage patterns, ensuring critical areas are tested first.
+By leveraging machine learning and pattern recognition, AI improves both the depth and breadth of testing, leading to faster feedback, fewer missed bugs, and more reliable software. This makes AI an essential component in modern DevOps and continuous testing pipelines.
+
+
+BONUS TASK
+Proposal: DocuGenAI – Intelligent Documentation Assistant for Software Projects
+Purpose
+DocuGenAI is an AI-powered tool designed to automate the generation of high-quality, context-aware documentation for software projects. It addresses the common challenge of incomplete or outdated documentation, which often hampers onboarding, maintenance, and collaboration in development teams.
+
+Workflow
+Code Analysis
+DocuGenAI scans source code repositories to understand structure, logic, and dependencies using NLP and static analysis.
+
+Context Extraction
+It identifies key components (functions, classes, APIs) and extracts relevant metadata, comments, and usage patterns.
+
+Documentation Generation
+Using generative AI, it produces readable documentation including:
+
+Function/class descriptions
+API usage examples
+Architecture diagrams
+Change logs and version notes
+Continuous Updates
+Integrated with Git, DocuGenAI updates documentation automatically with each commit or pull request.
+
+Customization & Collaboration
+Developers can review, edit, and approve generated content via a user-friendly dashboard or IDE plugin.
+
+Impact
+Improves developer productivity by reducing time spent writing and updating documentation.
+Enhances code maintainability and onboarding for new team members.
+Promotes consistency across projects and teams.
+Supports multilingual documentation, making global collaboration easier.
+DocuGenAI transforms documentation from a tedious task into a seamless, intelligent process,bridging the gap between code and clarity.
 
 
 
